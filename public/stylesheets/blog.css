@@ -1,0 +1,125 @@
+body{
+    background-color: #F3FEFF;
+    padding-top: 70px;
+}
+
+i {
+    padding-right: 5px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.btn-primary{
+    background-color: #F5BFFB;
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+}
+
+.btn-primary:hover{
+    background-color: #B551C1;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+}
+
+.btn-primary:focus{
+    background-color: #F5BFFB !important;
+    border: 1px solid black !important;
+    text-align: center !important;
+    color: black !important;
+}
+
+.btn-edit {
+    color: white;
+    background-color: #34659B;
+    border: 1px solid #34659B;
+    text-align: center;
+}
+
+.btn-edit:hover{
+    background-color: #0B3358;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+}
+
+.btn-edit:focus{
+    background-color: #34659B;
+    border: 1px solid #34659B;
+    color: white;
+    text-align: center;
+}
+
+.btn-delete {
+    color: #fff;
+    background-color: #950688;
+    border: 1px solid #950688;
+    text-align: center;
+}
+
+.btn-delete:hover {
+    color: #fff;
+    background-color: #430B58;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.btn-delete:focus {
+    color: #fff;
+    background-color: #950688;
+    border: 1px solid #950688;
+    text-align: center;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card {
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bg-light {
+    background-color: #ffe6ff !important;
+}
+
+.jumbotron {
+    text-align: center;
+    background: #e6f2ff;
+    margin-top: 50px;
+}
+
+#form-header{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#form-content{
+    width: 30%;
+    margin: 25px auto;
+}
+
+#show-card {
+    margin: 80px auto;
+    width: 50%;
+    text-align: center;
+}
+
+#show-comment{
+    margin: 5px auto;
+    width: 50%;
+    background-color: #ECF5FF !important;
+}
+
+#mainNavbar .nav-link{
+    color: black;
+}
+
+#mainNavbar .nav-link:hover{
+    color: #AFCFF2;
+}

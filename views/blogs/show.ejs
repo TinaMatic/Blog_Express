@@ -1,0 +1,45 @@
+<% include ../partials/header %>
+
+
+<div id="show-card" class="card mb-3">
+  <img src="<%=blog.image%>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%=blog.title%></h5>
+    <p class="card-text"><%=blog.body%>.</p>
+    <% if(currentUser && blog.author.id.equals(currentUser._id)) { %>
+      <a href="/blogs/<%=blog._id%>/edit" class="btn btn-edit">Edit</a>
+      <form class="delete-form" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-delete">Delete</button>
+      </form>
+    <% } %>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">
+      Created by: <%=blog.author.username%> <br>
+      Created <%=blog.created.toDateString()%>
+    </small>
+  </div>
+</div>
+
+
+<div id="show-comment" class="card bg-light mb-3">
+  <div class="card-header text-right">
+    <a class="btn btn-primary" href="/blogs/<%= blog._id %>/comments/new">Add New Comment</a>
+  </div>
+  <% blog.comments.forEach(function(comment){ %>
+    <div class="card-body">
+      <h5 class="card-title"><%= comment.author.username %></h5>
+      <p class="card-text"><%= comment.text %></p>
+      
+      <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+        <a class="btn btn-sm btn-edit" href="/blogs/<%= blog._id %>/comments/<%= comment._id %>/edit">Edit</a>
+        <form class="delete-form" action="/blogs/<%= blog._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+          <button class="btn btn-sm btn-delete">Delete</button>
+        </form>
+      <% } %>
+    </div>
+  <% }); %>
+</div>
+
+<% include ../partials/footer %>
+

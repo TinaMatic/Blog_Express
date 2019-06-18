@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+        
+    <nav id="mainNavbar" class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="/"><i class="fas fa-heart"></i>Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs/new">New Blog</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <% if(!currentUser) { %>
+            <li class="nav-item">
+                <a class="nav-link" href="/login" >LogIn</a>
+            </li>
+             <li class="nav-item">
+                  <a class="nav-link" href="/register">Sign Up</a>
+            </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Signed In As: <%=currentUser.username%></a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="/logout" >LogOut</a>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </nav>
+    
+    <div id="landing-header">
+ 		<h1>Welcome to the First Page!</h1>
+		<a href="/blogs" class="btn btn-lg btn-primary">View All Blogs</a>
+    </div>
+    
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<% include ./partials/footer %>

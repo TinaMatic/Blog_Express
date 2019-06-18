@@ -1,0 +1,150 @@
+body {
+  background-color: #000;
+  padding-top: 70px;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+i {
+    padding-right: 5px;
+}
+
+.btn-primary{
+    background-color: #F5BFFB;
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+}
+
+.btn-primary:hover{
+    background-color: #B551C1;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+}
+
+.btn-primary:focus{
+    background-color: #F5BFFB !important;
+    border: 1px solid black !important;
+    text-align: center !important;
+    color: black !important;
+}
+
+.bg-light {
+    background-color: #ffe6ff !important;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+#mainNavbar .nav-link{
+    color: black;
+}
+
+#mainNavbar .nav-link:hover{
+    color: #AFCFF2;
+}
+
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(../images/55939936_390576614830379_7734669104283385856_n.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(../images/IMG_2876.JPG);
+  animation-delay: 5s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(../images/QUPJ9942.JPG);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(../images/VDDA7654.JPG);
+  animation-delay: 15s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(../images/WSLC3604.JPG);
+  animation-delay: 20s; 
+}
+
+.slideshow li:nth-child(6) { 
+  background-image: url(../images/IMG_E2927.JPG);
+  animation-delay: 25s; 
+}
+
+.slideshow li:nth-child(7) { 
+  background-image: url(../images/56157831_344347486207964_7511344608916275200_n.jpg);
+  animation-delay: 30s; 
+}
+
+.slideshow li:nth-child(8) { 
+  background-image: url(../images/PXHR9384.JPG);
+  animation-delay: 35s; 
+}
+
+.slideshow li:nth-child(9) { 
+  background-image: url(../images/IMG_2847.JPG);
+  animation-delay: 40s; 
+}
+
+.slideshow li:nth-child(10) { 
+  background-image: url(../images/IMG_2415.JPG);
+  animation-delay: 45s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  5% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    opacity: 1
+  }
+  15% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
